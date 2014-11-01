@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Downloads the current release version of VMware Fusion and imports into Munki.</string>
+		<key>Identifier</key>
+		<string>com.github.jarias.munki.Fusion</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>Fusion</string>
+			<key>VERSION</key>
+			<string>7.0.1-2235595</string>
+			<key>MUNKI_REPO_SUBDIR</key>
+			<string>apps/Fusion</string>
+			<key>pkginfo</key>
+			<dict>
+				<key>catalogs</key>
+				<array>
+					<string>testing</string>
+				</array>
+				<key>description</key>
+				<string>VMware Fusion® 7 is the easiest, fastest and most reliable way to run Windows® applications on a Mac® without rebooting. It is recommended for new and existing Mac users who want to continue running the Windows application they can’t live without.</string>
+				<key>display_name</key>
+				<string>VMware Fusion</string>
+				<key>name</key>
+				<string>%NAME%</string>
+				<key>unattended_install</key>
+				<true/>
+				<key>unattended_uninstall</key>
+				<true/>
+			</dict>
+		</dict>
+
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
+					<key>url</key>
+					<string>https://download3.vmware.com/software/fusion/file/VMware-Fusion-%VERSION%.dmg</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>MunkiImporter</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pkg_path</key>
+					<string>%pathname%</string>
+					<key>repo_subdirectory</key>
+					<string>%MUNKI_REPO_SUBDIR%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+			</dict>
+		</array>
+	</dict>
+</plist>

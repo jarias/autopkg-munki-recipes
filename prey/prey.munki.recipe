@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Downloads the current release version of Prey and imports into Munki.</string>
+		<key>Identifier</key>
+		<string>com.github.jarias.munki.Prey</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>Prey</string>
+			<key>VERSION</key>
+			<string>1.2.10</string>
+			<key>MUNKI_REPO_SUBDIR</key>
+			<string>system/security/Prey</string>
+			<key>PREY_API_KEY</key>
+			<string>xxxxxxxx</string>
+			<key>pkginfo</key>
+			<dict>
+				<key>catalogs</key>
+				<array>
+					<string>testing</string>
+				</array>
+				<key>description</key>
+				<string></string>
+				<key>display_name</key>
+				<string>Prey</string>
+				<key>name</key>
+				<string>%NAME%</string>
+				<key>unattended_install</key>
+				<true/>
+				<key>installer_environment</key>
+				<dict>
+					<key>API_KEY</key>
+					<string>%PREY_API_KEY%</string>
+				</dict>
+			</dict>
+		</dict>
+
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
+					<key>url</key>
+					<string>https://github.com/prey/prey-node-client/releases/download/v%VERSION%/prey-mac-%VERSION%-x64.pkg</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>MunkiImporter</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pkg_path</key>
+					<string>%pathname%</string>
+					<key>repo_subdirectory</key>
+					<string>%MUNKI_REPO_SUBDIR%</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</plist>
