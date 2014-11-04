@@ -9,7 +9,7 @@
 		<key>Input</key>
 		<dict>
 			<key>NAME</key>
-			<string>IntelliJ IDEA 13.1</string>
+			<string>IntelliJ IDEA</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/jetbrains</string>
 			<key>VERSION</key>
@@ -21,7 +21,7 @@
                     <string>testing</string>
                 </array>
                 <key>description</key>
-                <string>IntelliJ IDEA 13.1, the Java IDE with the fastest-growing mindshare, includes support for Java 8 and Java EE 7, new tools for Android development, the editor enhancements, and refined Gradle integration.</string>
+                <string>IntelliJ IDEA, the Java IDE with the fastest-growing mindshare, includes support for Java 8 and Java EE 7, new tools for Android development, the editor enhancements, and refined Gradle integration.</string>
                 <key>display_name</key>
                 <string>%NAME%</string>
                 <key>name</key>

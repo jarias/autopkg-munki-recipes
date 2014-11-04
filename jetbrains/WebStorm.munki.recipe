@@ -3,17 +3,17 @@
 <plist version="1.0">
 	<dict>
 		<key>Identifier</key>
-		<string>com.github.jarias.munki.IntellijIdeaCE</string>
+		<string>com.github.jarias.munki.WebStorm</string>
 		<key>Description</key>
-		<string>Downloads Intellij Idea CE and imports into Munki.</string>
+		<string>Downloads WebStorm and imports into Munki.</string>
 		<key>Input</key>
 		<dict>
 			<key>NAME</key>
-			<string>IntelliJ IDEA CE</string>
+			<string>WebStorm</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/jetbrains</string>
 			<key>VERSION</key>
-			<string>13.1.5</string>
+			<string>9.0</string>
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
@@ -21,7 +21,7 @@
                     <string>testing</string>
                 </array>
                 <key>description</key>
-                <string>IntelliJ IDEA, the Java IDE with the fastest-growing mindshare, includes support for Java 8 and Java EE 7, new tools for Android development, the editor enhancements, and refined Gradle integration.</string>
+                <string>WebStorm is a lightweight yet powerful IDE, perfectly equipped for complex client-side development and server-side development with Node.js.</string>
                 <key>display_name</key>
                 <string>%NAME%</string>
                 <key>name</key>
@@ -30,7 +30,7 @@
                 <string>%VERSION%</string>
 				<key>postinstall_script</key>
             	<string>#!/bin/sh
-/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/IntelliJ IDEA 13 CE.app/Contents/Info.plist"
+/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/WebStorm.app/Contents/Info.plist"
 exit 0
             	</string>
 			</dict>
@@ -43,7 +43,7 @@ exit 0
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://download.jetbrains.com/idea/ideaIC-%VERSION%.dmg</string>
+					<string>http://download-cf.jetbrains.com/webstorm/WebStorm-%VERSION%.dmg</string>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>
