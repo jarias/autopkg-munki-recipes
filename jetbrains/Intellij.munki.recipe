@@ -17,22 +17,33 @@
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
-                <array>
-                    <string>testing</string>
-                </array>
-                <key>description</key>
-                <string>IntelliJ IDEA, the Java IDE with the fastest-growing mindshare, includes support for Java 8 and Java EE 7, new tools for Android development, the editor enhancements, and refined Gradle integration.</string>
-                <key>display_name</key>
-                <string>%NAME%</string>
-                <key>name</key>
-                <string>%NAME%</string>
-                <key>version</key>
-                <string>%VERSION%</string>
+				<array>
+					<string>testing</string>
+				</array>
+				<key>description</key>
+				<string>IntelliJ IDEA, the Java IDE with the fastest-growing mindshare, includes support for Java 8 and Java EE 7, new tools for Android development, the editor enhancements, and refined Gradle integration.</string>
+				<key>display_name</key>
+				<string>%NAME%</string>
+				<key>name</key>
+				<string>%NAME%</string>
+				<key>version</key>
+				<string>%VERSION%</string>
 				<key>postinstall_script</key>
-            	<string>#!/bin/sh
-/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/IntelliJ IDEA 14.app/Contents/Info.plist"
-exit 0
-            	</string>
+				<string>#!/bin/sh
+					/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/IntelliJ IDEA.app/Contents/Info.plist"
+					exit 0
+				</string>
+				<key>items_to_copy</key>
+				<array>
+					<dict>
+						<key>destination_path</key>
+                        <string>/Applications</string>
+						<key>source_item</key>
+						<string>IntelliJ IDEA 14.app</string>
+						<key>destination_item</key>
+						<string>IntelliJ IDEA.app</string>
+					</dict>
+				</array>
 			</dict>
 		</dict>
 		<key>Process</key>
