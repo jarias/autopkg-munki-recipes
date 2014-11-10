@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>ArduinoIDE</string>
 			<key>VERSION</key>
-			<string>1.5.7-r2</string>
+			<string>1.5.8</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/ArduinoIDE</string>
 			<key>pkginfo</key>
@@ -41,7 +41,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://downloads.arduino.cc/arduino-1.5.7-macosx-java7-r2.zip</string>
+					<string>http://arduino.cc/download.php?f=/arduino-1.5.8-macosx-java7.zip</string>
 				</dict>
 			</dict>
 			<dict>
