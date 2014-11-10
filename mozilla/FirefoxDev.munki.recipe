@@ -19,7 +19,7 @@
 					<string>testing</string>
 				</array>
 				<key>description</key>
-				<string>Built for those who build the Web</key>
+				<string>Built for those who build the Web</string>
 				<key>display_name</key>
 				<string>%NAME%</string>
 				<key>name</key>
