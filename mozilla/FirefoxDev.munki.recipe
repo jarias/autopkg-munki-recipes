@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Identifier</key>
+		<string>com.github.jarias.munki.FirefoxDev</string>
+		<key>Description</key>
+		<string>Downloads Firefox Developer Edition and imports into Munki.</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>Firefox Developer Edition</string>
+			<key>MUNKI_REPO_SUBDIR</key>
+			<string>apps/firefox</string>
+			<key>pkginfo</key>
+			<dict>
+				<key>catalogs</key>
+				<array>
+					<string>testing</string>
+				</array>
+				<key>description</key>
+				<string>Built for those who build the Web</key>
+				<string>%NAME%</string>
+				<key>name</key>
+				<string>%NAME%</string>
+			</dict>
+		</dict>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
+					<key>url</key>
+					<string>https://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla-aurora/firefox-35.0a2.en-US.mac.dmg</string>
+					<key>filename</key>
+					<string>%NAME%.dmg</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>MunkiImporter</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pkg_path</key>
+					<string>%pathname%</string>
+					<key>repo_subdirectory</key>
+					<string>%MUNKI_REPO_SUBDIR%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
