@@ -20,6 +20,7 @@
 				</array>
 				<key>description</key>
 				<string>Built for those who build the Web</key>
+				<key>display_name</key>
 				<string>%NAME%</string>
 				<key>name</key>
 				<string>%NAME%</string>
