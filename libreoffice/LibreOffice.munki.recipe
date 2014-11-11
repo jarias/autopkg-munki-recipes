@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>LibreOffice</string>
 			<key>VERSION</key>
-			<string>4.3.2</string>
+			<string>4.3.3</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/LibreOffice</string>
 			<key>pkginfo</key>
