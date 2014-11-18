@@ -15,26 +15,33 @@
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
-                <array>
-                    <string>testing</string>
-                </array>
-                <key>description</key>
-                <string>The DOS game emulator that’s fit for your Mac.</string>
-                <key>display_name</key>
-                <string>%NAME%</string>
-                <key>name</key>
-                <string>%NAME%</string>
+				<array>
+					<string>testing</string>
+				</array>
+				<key>description</key>
+				<string>The DOS game emulator that’s fit for your Mac.</string>
+				<key>display_name</key>
+				<string>%NAME%</string>
+				<key>name</key>
+				<string>%NAME%</string>
 			</dict>
 		</dict>
 		<key>Process</key>
 		<array>
 			<dict>
 				<key>Processor</key>
+				<string>SparkleUpdateInfoProvider</string>
+				<key>Arguments</key>
+				<dict>
+					<key>appcast_url</key>
+					<string>http://boxerapp.com/appcast.xml</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
 				<string>URLDownloader</string>
 				<key>Arguments</key>
 				<dict>
-					<key>url</key>
-					<string>http://boxerapp.com/download/latest</string>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>
