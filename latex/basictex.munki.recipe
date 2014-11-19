@@ -9,7 +9,7 @@
 		<key>Input</key>
 		<dict>
 			<key>NAME</key>
-			<string>MacTex</string>
+			<string>BasicTex</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/BasicTex</string>
 			<key>VERSION</key>
