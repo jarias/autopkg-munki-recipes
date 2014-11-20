@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Identifier</key>
+		<string>com.github.jarias.munki.atom</string>
+		<key>Description</key>
+		<string>Downloads Atom and imports into Munki.</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>Atom</string>
+			<key>MUNKI_REPO_SUBDIR</key>
+			<string>apps/Atom</string>
+			<key>pkginfo</key>
+			<dict>
+				<key>catalogs</key>
+				<array>
+					<string>testing</string>
+				</array>
+				<key>display_name</key>
+				<string>%NAME%</string>
+				<key>name</key>
+				<string>%NAME%</string>
+				<key>postinstall_script</key>
+				<string>#!/bin/sh
+					ln -Ffs "/Applications/Atom.app/Contents/Resources/app/atom.sh" /usr/bin/atom
+					ln -Ffs "/Applications/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm" /usr/bin/apm
+					exit 0
+				</string>
+				<key>postuninstall_script</key>
+				<string>#!/bin/sh
+					rm -f /usr/bin/atom
+					rm -f /usr/bin/apm
+					exit 0
+				</string>
+			</dict>
+		</dict>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
+					<key>url</key>
+					<string>https://atom.io/download/mac</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>Unarchiver</string>
+				<key>Arguments</key>
+				<dict>
+					<key>archive_path</key>
+					<string>%pathname%</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+					<key>purge_destination</key>
+					<true/>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>DmgCreator</string>
+				<key>Arguments</key>
+				<dict>
+					<key>dmg_root</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+					<key>dmg_path</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>MunkiImporter</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pkg_path</key>
+					<string>%dmg_path%</string>
+					<key>repo_subdirectory</key>
+					<string>%MUNKI_REPO_SUBDIR%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
