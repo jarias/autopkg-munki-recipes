@@ -36,7 +36,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>https://downloads.getchef.com/chef-dk/mac/#/</string>
+					<string>https://downloads.getchef.com/chef-dk/mac</string>
 					<key>re_pattern</key>
 					<string>(?P&lt;url&gt;https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-.*$\.dmg)</string>
 				</dict>
