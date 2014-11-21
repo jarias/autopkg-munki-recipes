@@ -52,7 +52,7 @@
 					<key>url</key>
 					<string>http://confluence.jetbrains.com/display/CLION/Early+Access+Program</string>
 					<key>re_pattern</key>
-					<string>(?P&lt;url&gt;http://download.jetbrains.com/cpp/CLion-.*.dmg)</string>
+					<string>(?P&lt;url&gt;http://download.jetbrains.com/cpp/CLion-.*\.dmg)</string>
 				</dict>
 			</dict>
 			<dict>
