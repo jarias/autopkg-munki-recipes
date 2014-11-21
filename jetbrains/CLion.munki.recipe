@@ -12,8 +12,6 @@
 			<string>CLion</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/jetbrains</string>
-			<key>VERSION</key>
-			<string>138.2344.17</string>
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
@@ -26,8 +24,6 @@
 				<string>%NAME%</string>
 				<key>name</key>
 				<string>%NAME%</string>
-				<key>version</key>
-				<string>%VERSION%</string>
 				<key>postinstall_script</key>
 				<string>#!/bin/sh
 					/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/CLion.app/Contents/Info.plist"
@@ -50,11 +46,20 @@
 		<array>
 			<dict>
 				<key>Processor</key>
-				<string>URLDownloader</string>
+				<string>URLTextSearcher</string>
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://download.jetbrains.com/cpp/CLion-%VERSION%.dmg</string>
+					<string>http://confluence.jetbrains.com/display/CLION/Early+Access+Program</string>
+					<key>re_pattern</key>
+					<string>(?P&lt;url&gt;http://download.jetbrains.com/cpp/CLion-.*.dmg)</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>
