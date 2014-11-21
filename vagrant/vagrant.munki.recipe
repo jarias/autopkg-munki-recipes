@@ -12,8 +12,6 @@
 			<string>Vagrant</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/vagrant</string>
-			<key>VERSION</key>
-			<string>1.6.5</string>
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
@@ -24,19 +22,28 @@
                 <string>%NAME%</string>
                 <key>name</key>
                 <string>%NAME%</string>
-                <key>version</key>
-                <string>%VERSION%</string>
 			</dict>
 		</dict>
 		<key>Process</key>
 		<array>
 			<dict>
 				<key>Processor</key>
-				<string>URLDownloader</string>
+				<string>URLTextSearcher</string>
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>https://dl.bintray.com/mitchellh/vagrant/vagrant_%VERSION%.dmg</string>
+					<string>https://www.vagrantup.com/downloads.html</string>
+					<key>re_pattern</key>
+					<string>(?P&lt;url&gt;https://dl.bintray.com/mitchellh/vagrant/vagrant_.*?\.dmg)</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
+					<key>filename</key>
+					<string>%NAME%.dmg</string>
 				</dict>
 			</dict>
 			<dict>
