@@ -12,8 +12,6 @@
 			<string>IntelliJ IDEA CE</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/jetbrains</string>
-			<key>VERSION</key>
-			<string>14</string>
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
@@ -26,8 +24,6 @@
 				<string>%NAME%</string>
 				<key>name</key>
 				<string>%NAME%</string>
-				<key>version</key>
-				<string>%VERSION%</string>
 				<key>postinstall_script</key>
 				<string>#!/bin/sh
 					/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/IntelliJ IDEA CE.app/Contents/Info.plist"
