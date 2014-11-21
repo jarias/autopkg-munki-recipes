@@ -41,9 +41,9 @@
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://www.alfredapp.com/</string>
+					<string>http://www.alfredapp.com</string>
 					<key>re_pattern</key>
-					<string>(?P&lt;url&gt;https://cachefly.alfredapp.com/Alfred_.*$\.zip)</string>
+					<string>(?P&lt;url&gt;https://cachefly.alfredapp.com/Alfred_.*?\.zip)</string>
 				</dict>
 			</dict>
 			<dict>
