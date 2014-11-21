@@ -37,11 +37,22 @@
 		<array>
 			<dict>
 				<key>Processor</key>
-				<string>URLDownloader</string>
+				<string>URLTextSearcher</string>
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>https://cachefly.alfredapp.com/Alfred_%VERSION%.zip</string>
+					<string>http://www.alfredapp.com/</string>
+					<key>re_pattern</key>
+					<string>(?P&lt;url&gt;https://cachefly.alfredapp.com/Alfred_.*$\.zip)</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
+					<key>filename</key>
+					<string>%NAME%.dmg</string>
 				</dict>
 			</dict>
 			<dict>
