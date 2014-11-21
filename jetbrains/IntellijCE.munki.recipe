@@ -50,11 +50,20 @@
 		<array>
 			<dict>
 				<key>Processor</key>
-				<string>URLDownloader</string>
+				<string>URLTextSearcher</string>
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://download.jetbrains.com/idea/ideaIC-%VERSION%.dmg</string>
+					<string>https://www.jetbrains.com/idea/download/download_thanks.jsp?os=mac&edition=IC</string>
+					<key>re_pattern</key>
+					<string>(?P&lt;url&gt;http://download.jetbrains.com/idea/ideaIC-.*.dmg)</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>
