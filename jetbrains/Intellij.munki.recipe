@@ -12,8 +12,6 @@
 			<string>IntelliJ IDEA</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/jetbrains</string>
-			<key>VERSION</key>
-			<string>14</string>
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
@@ -26,8 +24,6 @@
 				<string>%NAME%</string>
 				<key>name</key>
 				<string>%NAME%</string>
-				<key>version</key>
-				<string>%VERSION%</string>
 				<key>postinstall_script</key>
 				<string>#!/bin/sh
 					/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/IntelliJ IDEA.app/Contents/Info.plist"
@@ -50,11 +46,20 @@
 		<array>
 			<dict>
 				<key>Processor</key>
-				<string>URLDownloader</string>
+				<string>URLTextSearcher</string>
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://download.jetbrains.com/idea/ideaIU-%VERSION%.dmg</string>
+					<string>https://www.jetbrains.com/idea/download/download_thanks.jsp?os=mac&amp;edition=IU</string>
+					<key>re_pattern</key>
+					<string>(?P&lt;url&gt;http://download.jetbrains.com/idea/ideaIU-.*.dmg)</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>
