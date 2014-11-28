@@ -24,23 +24,10 @@
 				<string>%NAME%</string>
 				<key>name</key>
 				<string>%NAME%</string>
-				<key>version</key>
-				<string>%VERSION%</string>
 			</dict>
 		</dict>
 		<key>Process</key>
 		<array>
-			<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-					<key>url</key>
-					<string>https://downloads.getchef.com/chef-dk/mac/</string>
-					<key>re_pattern</key>
-					<string>(?P&lt;url&gt;https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-.*$\.dmg)</string>
-				</dict>
-			</dict>
 			<dict>
 				<key>Processor</key>
 				<string>URLDownloader</string>
@@ -48,6 +35,8 @@
 				<dict>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
+					<key>url</key>
+					<string>https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-%VERSION%.dmg</string>
 				</dict>
 			</dict>
 			<dict>
