@@ -23,7 +23,9 @@
 				<key>description</key>
 				<string></string>
 				<key>display_name</key>
-				<string>Prey</string>
+				<string>HoRNDIS</string>
+				<key>version</key>
+				<string>%VERSION%</string>
 				<key>name</key>
 				<string>%NAME%</string>
 				<key>developer</key>
