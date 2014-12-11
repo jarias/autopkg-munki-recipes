@@ -22,6 +22,10 @@
 				<string>%NAME%</string>
 				<key>name</key>
 				<string>%NAME%</string>
+				<key>category</key>
+                <string>Internet</string>
+                <key>developer</key>
+                <string>BitTorrent Inc.</string>
 			</dict>
 		</dict>
 		<key>Process</key>

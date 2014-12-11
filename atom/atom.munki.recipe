@@ -22,6 +22,10 @@
 				<string>%NAME%</string>
 				<key>name</key>
 				<string>%NAME%</string>
+				<key>category</key>
+                <string>Development</string>
+                <key>developer</key>
+                <string>GitHub Inc.</string>
 				<key>postinstall_script</key>
 				<string>#!/bin/sh
 					ln -Ffs "/Applications/Atom.app/Contents/Resources/app/atom.sh" /usr/bin/atom
