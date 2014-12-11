@@ -17,33 +17,44 @@
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
-                <array>
-                    <string>testing</string>
-                </array>
-                <key>description</key>
-                <string>PHP IDE that evolves with you.</string>
-                <key>display_name</key>
-                <string>%NAME%</string>
-                <key>name</key>
-                <string>%NAME%</string>
-                <key>version</key>
-                <string>%VERSION%</string>
+				<array>
+					<string>testing</string>
+				</array>
+				<key>description</key>
+				<string>PHP IDE that evolves with you.</string>
+				<key>display_name</key>
+				<string>%NAME%</string>
+				<key>name</key>
+				<string>%NAME%</string>
+				<key>category</key>
+				<string>Development</string>
+				<key>developer</key>
+				<string>JetBrains s.r.o.</string>
 				<key>postinstall_script</key>
-            	<string>#!/bin/sh
-/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/PhpStorm.app/Contents/Info.plist"
-exit 0
-            	</string>
+				<string>#!/bin/sh
+					/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/PhpStorm.app/Contents/Info.plist"
+					exit 0
+				</string>
 			</dict>
 		</dict>
 		<key>Process</key>
 		<array>
 			<dict>
 				<key>Processor</key>
-				<string>URLDownloader</string>
+				<string>URLTextSearcher</string>
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://download.jetbrains.com/webide/PhpStorm-%VERSION%.dmg</string>
+					<string>https://www.jetbrains.com/phpstorm/download/download_thanks.jsp?os=mac&amp;edition=prof</string>
+					<key>re_pattern</key>
+					<string>(?P&lt;url&gt;http://download.jetbrains.com/webide/PhpStorm-.*\.dmg)</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>

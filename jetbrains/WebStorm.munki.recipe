@@ -24,6 +24,10 @@
                 <string>%NAME%</string>
                 <key>name</key>
                 <string>%NAME%</string>
+                <key>category</key>
+                <string>Development</string>
+                <key>developer</key>
+                <string>JetBrains s.r.o.</string>
 				<key>postinstall_script</key>
             	<string>#!/bin/sh
 /usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/WebStorm.app/Contents/Info.plist"
