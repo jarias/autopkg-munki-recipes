@@ -27,16 +27,24 @@
                 <string>Sublime Text 2</string>
                 <key>name</key>
                 <string>%NAME%</string>
+                <key>category</key>
+                <string>Development</string>
+                <key>developer</key>
+                <string>Sublime HQ Pty Ltd.</string>
                 <key>unattended_install</key>
                 <true/>
                 <key>postinstall_script</key>
                 <string>#!/bin/sh
-                    ln -Ffs "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
+                    if [ ! -e /usr/bin/subl ]; then
+                        ln -Ffs "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
+                    fi
                     exit 0
                 </string>
                 <key>postuninstall_script</key>
                 <string>#!/bin/sh
-                    rm -f /usr/bin/subl
+                    if [ "$(readlink /usr/bin/subl)" == "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ]; then
+                        rm -f /usr/bin/subl
+                    fi
                     exit 0
                 </string>
             </dict>
