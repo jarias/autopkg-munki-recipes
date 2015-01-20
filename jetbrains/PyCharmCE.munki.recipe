@@ -30,7 +30,7 @@
                 <string>JetBrains s.r.o.</string>
 				<key>postinstall_script</key>
             	<string>#!/bin/sh
-/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/PyCharm.app/Contents/Info.plist"
+/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/PyCharm CE.app/Contents/Info.plist"
 exit 0
             	</string>
 			</dict>
