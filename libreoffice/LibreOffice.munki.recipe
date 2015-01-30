@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>LibreOffice</string>
 			<key>TYPE</key>
-			<string>mac-x86</string>
+			<string>mac-x86_64</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/LibreOffice</string>
 			<key>pkginfo</key>
