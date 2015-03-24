@@ -56,7 +56,7 @@
 					<key>url</key>
 					<string>https://www.jetbrains.com/idea/download/download_thanks.jsp?os=mac&amp;edition=IU</string>
 					<key>re_pattern</key>
-					<string>(?P&lt;url&gt;http://download.jetbrains.com/idea/ideaIU-.*\.dmg)</string>
+					<string>(?P&lt;url&gt;http://download.jetbrains.com/idea/ideaIU-.*?\.dmg)</string>
 				</dict>
 			</dict>
 			<dict>
