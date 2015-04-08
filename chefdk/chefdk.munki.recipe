@@ -12,8 +12,6 @@
 			<string>Chefdk</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/Chefdk</string>
-			<key>VERSION</key>
-			<string>0.3.5-1</string>
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
@@ -24,10 +22,25 @@
 				<string>%NAME%</string>
 				<key>name</key>
 				<string>%NAME%</string>
+				<key>category</key>
+                <string>SysOps</string>
+                <key>developer</key>
+                <string>Chef Software, Inc.</string>
 			</dict>
 		</dict>
 		<key>Process</key>
 		<array>
+			<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+					<key>url</key>
+					<string>https://downloads.chef.io/chef-dk/mac</string>
+					<key>re_pattern</key>
+					<string>(?P&lt;url&gt;https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-.*?\.dmg)</string>
+				</dict>
+			</dict>
 			<dict>
 				<key>Processor</key>
 				<string>URLDownloader</string>
@@ -35,8 +48,6 @@
 				<dict>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
-					<key>url</key>
-					<string>https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-%VERSION%.dmg</string>
 				</dict>
 			</dict>
 			<dict>
