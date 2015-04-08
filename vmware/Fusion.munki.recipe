@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>Fusion</string>
 			<key>VERSION</key>
-			<string>7.0.1-2235595</string>
+			<string>7.1.1-2498930</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/Fusion</string>
 			<key>pkginfo</key>
