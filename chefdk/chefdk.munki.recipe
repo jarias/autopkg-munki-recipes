@@ -32,20 +32,11 @@
 		<array>
 			<dict>
 				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-					<key>url</key>
-					<string>https://downloads.chef.io/chef-dk/mac</string>
-					<key>re_pattern</key>
-					<string>(?P&lt;url&gt;https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-.*?\.dmg)</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>Processor</key>
 				<string>URLDownloader</string>
 				<key>Arguments</key>
 				<dict>
+					<key>url</key>
+					<string>https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-0.4.0-1.dmg</string>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>
