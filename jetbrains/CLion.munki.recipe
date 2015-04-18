@@ -32,18 +32,7 @@
 				<string>#!/bin/sh
 					/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/CLion.app/Contents/Info.plist"
 					exit 0
-				</string>
-				<key>items_to_copy</key>
-				<array>
-					<dict>
-						<key>destination_path</key>
-						<string>/Applications</string>
-						<key>source_item</key>
-						<string>CLion EAP.app</string>
-						<key>destination_item</key>
-						<string>CLion.app</string>
-					</dict>
-				</array>
+				</string>				
 			</dict>
 		</dict>
 		<key>Process</key>
