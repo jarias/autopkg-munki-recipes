@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>ArduinoIDE</string>
 			<key>VERSION</key>
-			<string>1.6.3</string>
+			<string>1.6.4</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/ArduinoIDE</string>
 			<key>pkginfo</key>
@@ -43,7 +43,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://downloads.arduino.cc/arduino-1.6.3-macosx.zip</string>
+					<string>http://downloads.arduino.cc/arduino-%VERSION%-macosx.zip</string>
 				</dict>
 			</dict>
 			<dict>
