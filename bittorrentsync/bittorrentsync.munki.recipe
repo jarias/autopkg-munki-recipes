@@ -26,6 +26,8 @@
                 <string>Internet</string>
                 <key>developer</key>
                 <string>BitTorrent Inc.</string>
+                <key>description</key>
+                <string>Fast, private file sharing for teams and individuals.</string>
 			</dict>
 		</dict>
 		<key>Process</key>
@@ -36,7 +38,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://download.getsyncapp.com/endpoint/btsync/os/osx/track/stable</string>
+					<string>https://download-cdn.getsyncapp.com/stable/osx/BitTorrent-Sync.dmg</string>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>
