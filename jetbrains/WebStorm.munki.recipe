@@ -45,7 +45,7 @@ exit 0
 					<key>url</key>
 					<string>https://www.jetbrains.com/webstorm/download/download_thanks.jsp?os=mac</string>
 					<key>re_pattern</key>
-					<string>(?P&lt;url&gt;http://download.jetbrains.com/webstorm/WebStorm-.*.dmg)</string>
+					<string>(?P&lt;url&gt;http://download.jetbrains.com/webstorm/WebStorm-.*?\.dmg)</string>
 				</dict>
 			</dict>
 			<dict>
