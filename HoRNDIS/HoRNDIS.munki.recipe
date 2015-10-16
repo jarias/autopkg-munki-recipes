@@ -45,7 +45,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>http://joshuawise.com/downloads/HoRNDIS-rel%VERSION%.pkg</string>
+					<string>https://github.com/jwise/HoRNDIS/releases/download/rel%VERSION%/HoRNDIS-rel%VERSION%.pkg</string>
 				</dict>
 			</dict>
 			<dict>
