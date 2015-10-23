@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>Fusion</string>
 			<key>VERSION</key>
-			<string>7.1.1-2498930</string>
+			<string>8.0.1-3094680</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>apps/Fusion</string>
 			<key>pkginfo</key>
@@ -21,7 +21,7 @@
 					<string>testing</string>
 				</array>
 				<key>description</key>
-				<string>VMware Fusion® 7 is the easiest, fastest and most reliable way to run Windows® applications on a Mac® without rebooting. It is recommended for new and existing Mac users who want to continue running the Windows application they can’t live without.</string>
+				<string>VMware Fusion® is the easiest, fastest and most reliable way to run Windows® applications on a Mac® without rebooting. It is recommended for new and existing Mac users who want to continue running the Windows application they can’t live without.</string>
 				<key>display_name</key>
 				<string>VMware Fusion</string>
 				<key>name</key>
