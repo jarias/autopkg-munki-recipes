@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>Prey</string>
 			<key>VERSION</key>
-			<string>1.3.9</string>
+			<string>1.4.2</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>system/security/Prey</string>
 			<key>PREY_API_KEY</key>
