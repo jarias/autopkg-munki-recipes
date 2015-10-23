@@ -33,7 +33,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>https://www.hipchat.com/downloads/latest/mac</string>
+					<string>https://s3.amazonaws.com/uploads.hipchat.com/10804/1699248/dZxE36RSiZCYmKe/HipChat.zip</string>
 					<key>filename</key>
 					<string>%NAME%.zip</string>
 				</dict>
