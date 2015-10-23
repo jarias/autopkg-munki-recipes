@@ -24,6 +24,8 @@
 				<string>%NAME%</string>
 				<key>name</key>
 				<string>%NAME%</string>
+				<key>category</key>
+                <string>Gaming</string>
 			</dict>
 		</dict>
 		<key>Process</key>
