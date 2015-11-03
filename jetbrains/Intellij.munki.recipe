@@ -39,7 +39,7 @@
 						<key>destination_path</key>
                         <string>/Applications</string>
 						<key>source_item</key>
-						<string>IntelliJ IDEA 14.app</string>
+						<string>IntelliJ IDEA 15.app</string>
 						<key>destination_item</key>
 						<string>IntelliJ IDEA.app</string>
 					</dict>
