@@ -43,7 +43,7 @@ exit 0
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>https://www.jetbrains.com/pycharm/download/download_thanks.jsp?os=mac&amp;edition=comm</string>
+					<string>https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&amp;code=PCC</string>
 					<key>re_pattern</key>
 					<string>(?P&lt;url&gt;http://download.jetbrains.com/python/pycharm-community-.*?\.dmg)</string>
 				</dict>

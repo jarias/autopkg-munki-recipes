@@ -54,7 +54,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>https://www.jetbrains.com/idea/download/download_thanks.jsp?os=mac&amp;edition=IC</string>
+					<string>https://www.jetbrains.com/idea/download/download-thanks.html?platform=mac&amp;code=IIC</string>
 					<key>re_pattern</key>
 					<string>(?P&lt;url&gt;http://download.jetbrains.com/idea/ideaIC-.*?\.dmg)</string>
 				</dict>
