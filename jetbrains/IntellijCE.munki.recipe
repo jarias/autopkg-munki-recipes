@@ -54,9 +54,9 @@
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>https://www.jetbrains.com/idea/download/download-thanks.html?platform=mac&amp;code=IIC</string>
+					<string>https://data.services.jetbrains.com/products/releases?code=IIC</string>
 					<key>re_pattern</key>
-					<string>(?P&lt;url&gt;http://download.jetbrains.com/idea/ideaIC-.*?\.dmg)</string>
+					<string>(?P&lt;url&gt;https:\/\/download\.jetbrains\.com\/idea\/ideaIC-(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)-custom-jdk-bundled\.dmg)</string>
 				</dict>
 			</dict>
 			<dict>
