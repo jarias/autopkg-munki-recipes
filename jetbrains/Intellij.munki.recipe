@@ -48,24 +48,22 @@
 		</dict>
 		<key>Process</key>
 		<array>
-			<!--<dict>
+			<dict>
 				<key>Processor</key>
 				<string>URLTextSearcher</string>
 				<key>Arguments</key>
 				<dict>
 					<key>url</key>
-					<string>https://www.jetbrains.com/idea/download/download-thanks.html?platform=mac</string>
+					<string>https://data.services.jetbrains.com/products/releases?code=IIU</string>
 					<key>re_pattern</key>
 					<string>(?P&lt;url&gt;https://download.jetbrains.com/idea/ideaIU-.*?\.dmg)</string>
 				</dict>
-			</dict>-->
+			</dict>
 			<dict>
 				<key>Processor</key>
 				<string>URLDownloader</string>
 				<key>Arguments</key>
-				<dict>
-					<key>url</key>
-					<string>https://download.jetbrains.com/idea/ideaIU-15.0.2-custom-jdk-bundled.dmg</string>
+				<dict>					
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>
