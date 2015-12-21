@@ -37,7 +37,7 @@
 		</dict>
 		<key>Process</key>
 		<array>
-			<dict>
+			<!--<dict>
 				<key>Processor</key>
 				<string>URLTextSearcher</string>
 				<key>Arguments</key>
@@ -47,12 +47,14 @@
 					<key>re_pattern</key>
 					<string>(?P&lt;url&gt;http://download.jetbrains.com/python/pycharm-professional-.*?\.dmg)</string>
 				</dict>
-			</dict>
+			</dict>-->
 			<dict>
 				<key>Processor</key>
 				<string>URLDownloader</string>
 				<key>Arguments</key>
 				<dict>
+					<key>url</key>
+					<string>https://download.jetbrains.com/python/pycharm-professional-5.0.2-jdk-bundled.dmg</string>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>

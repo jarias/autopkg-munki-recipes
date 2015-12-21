@@ -32,12 +32,12 @@
 				<string>#!/bin/sh
 					/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/CLion.app/Contents/Info.plist"
 					exit 0
-				</string>				
+				</string>
 			</dict>
 		</dict>
 		<key>Process</key>
 		<array>
-			<dict>
+			<!--<dict>
 				<key>Processor</key>
 				<string>URLTextSearcher</string>
 				<key>Arguments</key>
@@ -47,12 +47,14 @@
 					<key>re_pattern</key>
 					<string>(?P&lt;url&gt;http://download.jetbrains.com/cpp/CLion-.*?\.dmg)</string>
 				</dict>
-			</dict>
+			</dict>-->
 			<dict>
 				<key>Processor</key>
 				<string>URLDownloader</string>
 				<key>Arguments</key>
 				<dict>
+					<key>url</key>
+					<string>https://download.jetbrains.com/cpp/CLion-1.2.2-custom-jdk-bundled.dmg</string>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>

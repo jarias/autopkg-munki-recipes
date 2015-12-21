@@ -37,7 +37,7 @@ exit 0
 		</dict>
 		<key>Process</key>
 		<array>
-			<dict>
+			<!--<dict>
 				<key>Processor</key>
 				<string>URLTextSearcher</string>
 				<key>Arguments</key>
@@ -47,12 +47,14 @@ exit 0
 					<key>re_pattern</key>
 					<string>(?P&lt;url&gt;https://download.jetbrains.com/objc/AppCode-.*?-custom-jdk-bundled\.dmg)</string>
 				</dict>
-			</dict>
+			</dict>-->
 			<dict>
 				<key>Processor</key>
 				<string>URLDownloader</string>
 				<key>Arguments</key>
 				<dict>
+					<key>url</key>
+					<string>https://download.jetbrains.com/objc/AppCode-3.3.2-custom-jdk-bundled.dmg</string>
 					<key>filename</key>
 					<string>%NAME%.dmg</string>
 				</dict>
