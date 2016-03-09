@@ -20,7 +20,7 @@
             <key>NAME</key>
             <string>OracleJDK8</string>
             <key>VERSION</key>
-            <string>1.8.0_66</string>
+            <string>1.8.0_73</string>
             <key>pkginfo</key>
             <dict>
                 <key>catalogs</key>
