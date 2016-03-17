@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+  <dict>
+    <key>ParentRecipe</key>
+    <string>com.github.jarias.download.SublimeText3</string>
+
+    <key>Description</key>
+    <string>Downloads the current release version of Sublime Text 3 and imports into Munki.</string>
+    <key>Input</key>
     <dict>
-        <key>ParentRecipe</key>
-        <string>com.github.jarias.download.SublimeText3</string>
-
-        <key>Description</key>
-        <string>Downloads the current release version of Sublime Text 3 and imports into Munki.</string>
-        <key>Input</key>
-        <dict>
-            <key>IDENTIFIER</key>
-            <string>com.github.jarias.munki.SublimeText3</string>
-            <key>NAME</key>
-            <string>SublimeText3</string>
-            <key>MUNKI_REPO_SUBDIR</key>
-            <string>apps/SublimeText/SublimeText3</string>
-            <key>pkginfo</key>
-            <dict>
-                <key>catalogs</key>
-                <array>
-                    <string>testing</string>
-                </array>
-                <key>description</key>
-                <string>Sublime Text is an advanced text editor for OS X.</string>
-                <key>display_name</key>
-                <string>Sublime Text 3</string>
-                <key>name</key>
-                <string>%NAME%</string>
-                <key>category</key>
-                <string>Development</string>
-                <key>developer</key>
-                <string>Sublime HQ Pty Ltd.</string>
-                <key>unattended_install</key>
-                <true/>
-                <key>postinstall_script</key>
-                <string>#!/bin/sh
-                    if [ ! -e /usr/bin/subl ]; then
-                        ln -Ffs "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
-                    end
-                    exit 0
-                </string>
-                <key>postuninstall_script</key>
-                <string>#!/bin/sh
-                    if [ "$(readlink /usr/bin/subl)" == "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]; then
-                        rm -f /usr/bin/subl
-                    fi
-                    exit 0
-                </string>
-            </dict>
-        </dict>
-
-        <key>Process</key>
+      <key>IDENTIFIER</key>
+      <string>com.github.jarias.munki.SublimeText3</string>
+      <key>NAME</key>
+      <string>SublimeText3</string>
+      <key>MUNKI_REPO_SUBDIR</key>
+      <string>apps/SublimeText/SublimeText3</string>
+      <key>pkginfo</key>
+      <dict>
+        <key>catalogs</key>
         <array>
-            <dict>
-                <key>Arguments</key>
-                <dict>
-                    <key>pkg_path</key>
-                    <string>%pathname%</string>
-                    <key>repo_subdirectory</key>
-                    <string>%MUNKI_REPO_SUBDIR%</string>
-                </dict>
-                <key>Processor</key>
-                <string>MunkiImporter</string>
-            </dict>
+          <string>testing</string>
         </array>
+        <key>description</key>
+        <string>Sublime Text is an advanced text editor for OS X.</string>
+        <key>display_name</key>
+        <string>Sublime Text 3</string>
+        <key>name</key>
+        <string>%NAME%</string>
+        <key>category</key>
+        <string>Development</string>
+        <key>developer</key>
+        <string>Sublime HQ Pty Ltd.</string>
+        <key>unattended_install</key>
+        <true/>
+        <key>postinstall_script</key>
+        <string>#!/bin/sh
+          if [ ! -e /usr/bin/subl ]; then
+          ln -Ffs "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
+          end
+          exit 0
+        </string>
+        <key>postuninstall_script</key>
+        <string>#!/bin/sh
+          if [ "$(readlink /usr/bin/subl)" == "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]; then
+          rm -f /usr/bin/subl
+          fi
+          exit 0
+        </string>
+      </dict>
     </dict>
+
+    <key>Process</key>
+    <array>
+      <dict>
+        <key>Arguments</key>
+        <dict>
+          <key>pkg_path</key>
+          <string>%pathname%</string>
+          <key>repo_subdirectory</key>
+          <string>%MUNKI_REPO_SUBDIR%</string>
+        </dict>
+        <key>Processor</key>
+        <string>MunkiImporter</string>
+      </dict>
+    </array>
+  </dict>
 </plist>
