@@ -33,18 +33,6 @@
 					/usr/libexec/PlistBuddy -c 'Set :JVMOptions:JVMVersion 1.8+' "/Applications/IntelliJ IDEA CE.app/Contents/Info.plist"
 					exit 0
 				</string>
-				<key>items_to_copy</key>
-				<array>
-					<dict>
-						<key>destination_path</key>
-						<string>/Applications</string>
-						<key>source_item</key>
-						<string>IntelliJ IDEA 15 CE.app</string>
-						<key>destination_item</key>
-						<string>IntelliJ IDEA CE.app</string>
-					</dict>
-				</array>
-			</dict>
 		</dict>
 		<key>Process</key>
 		<array>
