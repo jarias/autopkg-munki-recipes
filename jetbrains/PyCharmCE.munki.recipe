@@ -45,7 +45,7 @@
           <key>url</key>
           <string>https://data.services.jetbrains.com/products/releases?code=PCC</string>
           <key>re_pattern</key>
-          <string>(?P&lt;url&gt;https:\/\/download\.jetbrains\.com\/python\/pycharm-community-(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.dmg)</string>
+          <string>(?P&lt;url&gt;https:\/\/download\.jetbrains\.com\/python\/pycharm-community-(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)-jdk-bundled\.dmg)</string>
         </dict>
       </dict>
       <dict>
