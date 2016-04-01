@@ -45,7 +45,7 @@
           <key>url</key>
           <string>https://data.services.jetbrains.com/products/releases?code=AC</string>
           <key>re_pattern</key>
-          <string>(?P&lt;url&gt;https:\/\/download\.jetbrains\.com\/objc\/AppCode-(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)-custom-jdk-bundled\.dmg)</string>
+          <string>(?P&lt;url&gt;https:\/\/download\.jetbrains\.com\/objc\/AppCode-(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.dmg)</string>
         </dict>
       </dict>
       <dict>
