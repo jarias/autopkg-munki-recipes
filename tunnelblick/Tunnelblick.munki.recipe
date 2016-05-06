@@ -34,6 +34,7 @@
     </dict>
     <key>Process</key>
     <array>
+      <!--
       <dict>
         <key>Processor</key>
         <string>SparkleUpdateInfoProvider</string>
@@ -43,11 +44,14 @@
           <string>https://www.tunnelblick.net/appcast.rss</string>
         </dict>
       </dict>
+      -->
       <dict>
         <key>Processor</key>
         <string>URLDownloader</string>
         <key>Arguments</key>
         <dict>
+          <key>url</key>
+          <string>https://www.tunnelblick.net/release/Tunnelblick_3.6.3_build_4560.dmg</string>
           <key>filename</key>
           <string>%NAME%.dmg</string>
         </dict>
