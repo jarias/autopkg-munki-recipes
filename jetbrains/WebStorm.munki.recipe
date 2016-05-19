@@ -45,7 +45,7 @@
           <key>url</key>
           <string>https://data.services.jetbrains.com/products/releases?code=WS</string>
           <key>re_pattern</key>
-          <string>(?P&lt;url&gt;https:\/\/download\.jetbrains\.com\/webstorm\/WebStorm-(\*|\d+(\.\d+){0,2}(.*)?)\.dmg)</string>
+          <string>mac":{"link":"(.+?dmg)"</string>
         </dict>
       </dict>
       <dict>
@@ -53,6 +53,8 @@
         <string>URLDownloader</string>
         <key>Arguments</key>
         <dict>
+          <key>url</key>
+          <string>%match%</string>
           <key>filename</key>
           <string>%NAME%.dmg</string>
         </dict>
