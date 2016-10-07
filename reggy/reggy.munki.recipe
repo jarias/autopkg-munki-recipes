@@ -53,6 +53,8 @@
           <string>%RECIPE_CACHE_DIR%/%NAME%</string>
           <key>purge_destination</key>
           <true/>
+          <key>archive_format</key>
+          <string>tar_bzip2</key>
         </dict>
       </dict>
       <dict>
