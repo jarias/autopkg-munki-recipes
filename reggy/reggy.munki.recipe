@@ -54,7 +54,7 @@
           <key>purge_destination</key>
           <true/>
           <key>archive_format</key>
-          <string>tar_bzip2</key>
+          <string>tar_bzip2</string>
         </dict>
       </dict>
       <dict>
