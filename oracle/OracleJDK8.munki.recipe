@@ -20,7 +20,7 @@
       <key>NAME</key>
       <string>OracleJDK8</string>
       <key>VERSION</key>
-      <string>1.8.0u111</string>
+      <string>1.8.0u112-b16</string>
       <key>pkginfo</key>
       <dict>
         <key>catalogs</key>
@@ -47,7 +47,7 @@
         <key>Arguments</key>
         <dict>
           <key>url</key>
-          <string>http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-macosx-x64.dmg</string>
+          <string>http://download.oracle.com/otn-pub/java/jdk/8u112-b16/jdk-8u112-macosx-x64.dmg</string>
           <key>request_headers</key>
           <dict>
             <key>Cookie</key>
