@@ -13,7 +13,7 @@
       <key>MUNKI_REPO_SUBDIR</key>
       <string>apps</string>
       <key>RELEASE</key>
-      <string>testing</string>
+      <string>final</string>
       <key>pkginfo</key>
       <dict>
         <key>catalogs</key>
