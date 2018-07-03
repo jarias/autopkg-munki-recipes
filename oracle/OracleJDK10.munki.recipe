@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>Description</key>
-    <string>Downloads the latest Oracle Java 10 JRE and imports into Munki.
+    <string>Downloads the latest Oracle Java 10 JDK and imports into Munki.
 
       To use this recipe, you must accept the Oracle Binary Code License Agreement for Java SE.
       http://www.oracle.com/technetwork/java/javase/terms/license/index.html
@@ -12,15 +12,15 @@
       the prefPane bundle, which has historically had consistent versioning.
     </string>
     <key>Identifier</key>
-    <string>com.github.jarias.munki.OracleJava8</string>
+    <string>com.github.jarias.munki.OracleJava10</string>
     <key>Input</key>
     <dict>
       <key>MUNKI_REPO_SUBDIR</key>
       <string>system/java</string>
       <key>NAME</key>
-      <string>OracleJDK8</string>
+      <string>OracleJDK10</string>
       <key>VERSION</key>
-      <string>1.8.0u171-b11</string>
+      <string>10.0.1</string>
       <key>pkginfo</key>
       <dict>
         <key>catalogs</key>
@@ -28,9 +28,9 @@
           <string>testing</string>
         </array>
         <key>description</key>
-        <string>Java SE Runtime Environment 8 enables support for running Java-powered applets and applications.</string>
+        <string>Java SE Runtime Environment 10 enables support for running Java-powered applets and applications.</string>
         <key>display_name</key>
-        <string>Oracle Java 8</string>
+        <string>Oracle Java 10</string>
         <key>name</key>
         <string>%NAME%</string>
         <key>version</key>
@@ -47,7 +47,7 @@
         <key>Arguments</key>
         <dict>
           <key>url</key>
-          <string>http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-macosx-x64.dmg</string>
+          <string>http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_osx-x64_bin.dmg</string>
           <key>request_headers</key>
           <dict>
             <key>Cookie</key>
