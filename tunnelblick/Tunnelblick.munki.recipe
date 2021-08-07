@@ -51,7 +51,7 @@
         <key>Arguments</key>
         <dict>
           <key>url</key>
-          <string>https://github.com/Tunnelblick/Tunnelblick/releases/download/v3.7.6a/Tunnelblick_3.7.6a_build_5080.dmg</string>
+          <string>https://www.tunnelblick.net/release/Tunnelblick_3.8.5a_build_5671.dmg</string>
           <key>filename</key>
           <string>%NAME%.dmg</string>
         </dict>
